@@ -5,3 +5,10 @@ function getComputerChoice() {
     let pcDecision = options[rand];
     return (pcDecision);
 }
+let playerSelection = "";
+
+function playRound(playerSelection, computerChoice) {
+    while (!(playerSelection === "ROCK" ||playerSelection === "PAPER" ||playerSelection === "SCISSORS")) {
+        playerSelection = prompt("What you gonna choose?", "")
+        playerSelection = playerSelection.toUpperCase()
+    }
