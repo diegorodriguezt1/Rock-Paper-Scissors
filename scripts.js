@@ -5,7 +5,11 @@ function getComputerChoice() {
     let pcDecision = options[rand];
     return (pcDecision);
 }
+
+let computerChoice = getComputerChoice();
 let playerSelection = "";
+let userPoints = 0;
+let pcPoints = 0;
 
 function playRound(playerSelection, computerChoice) {
     while (!(playerSelection === "ROCK" ||playerSelection === "PAPER" ||playerSelection === "SCISSORS")) {
@@ -13,27 +17,46 @@ function playRound(playerSelection, computerChoice) {
         playerSelection = playerSelection.toUpperCase()
     }
     if (playerSelection === "ROCK" && computerChoice === "SCISSORS") {
-        console.log("You Win! Rock beats Scissors")
+        ++userPoints;
+        return ("You Win! Rock beats Scissors");
     }
     else if (playerSelection === "PAPER" && computerChoice === "SCISSORS") {
-        console.log("You Lose! Scissors cut Paper")
+        ++pcPoints;
+        return ("You Lose! Scissors cut Paper")
     }
     else if (playerSelection === "ROCK" && computerChoice === "PAPER") {
-        console.log("You Lose! Paper wrap Rock")
+        ++pcPoints;
+        return ("You Lose! Paper wrap Rock")
     }
     else if (playerSelection === "PAPER" && computerChoice === "ROCK") {
-        console.log("You Win! Paper wrap Rock")
+        ++userPoints;
+        return ("You Win! Paper wrap Rock")
     }
     else if (playerSelection === "SCISSORS" && computerChoice === "ROCK") {
-        console.log("You Lose! Rock beats Scissors")
+        ++pcPoints;
+        return ("You Lose! Rock beats Scissors")
     }
     else if (playerSelection === "SCISSORS" && computerChoice === "PAPER") {
-        console.log("You Win! Scissors cut Paper")
+        ++userPoints;
+        return ("You Win! Scissors cut Paper")
     }
     else if (playerSelection === computerChoice) {
-        console.log("It's a Tie!!!")
+        ++pcPoints;
+        ++userPoints;
+        return ("It's a Tie!!!")
     }
 }
 
-computerChoice = getComputerChoice();
-console.log(playRound(playerSelection, computerChoice));
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(playerSelection, computerChoice));
+        computerChoice = getComputerChoice();
+    }
+    if (userPoints > pcPoints) {
+        return ("Congratulations!!! You are the WINNER!!")
+    } else {
+        return ("Sorry, you lose =( ")
+    }
+}
+
+console.log(game());
