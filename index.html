@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="./scripts.js" defer></script>
     <title>Rock, Paper & Scissors 🎮</title>
 </head>
 <body>
     <h1>Rock, Paper & Scissors</h1>
-    <div class="score">
+    <div class="players active">
         <div class="human">Human</div>
         <div class="computer">Machine</div>
     </div>
-    <div class="choose">
-        <button class="rock">Rock</button>
-        <button class="paper">Paper</button>
-        <button class="scissors">Scissors</button>
+    <div class="score active">
+        <div class="user">0</div>
+        <div class="pc">0</div>
+    </div>
+    <div class="round active">Prepare yourself</div>
+    <div class="choose active">
+        <button class="rock">
+            <img src="img/rock.png" alt="rock image">
+        </button>
+        <button class="paper">
+            <img src="img/paper.png" alt="paper image">
+        </button>
+        <button class="scissors">
+            <img src="img/scissors.png" alt="scissors image">
+        </button>
     </div>
 </body>
 </html>
