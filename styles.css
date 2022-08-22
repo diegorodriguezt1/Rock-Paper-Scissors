@@ -50,3 +50,65 @@ img {
     margin-top: 30px;
     gap: 50px;
 }
+
+.rock {
+    border-radius: 50%;
+    outline: none;
+    background-color: lightgoldenrodyellow;
+}
+
+.paper {
+    border-radius: 50%;
+    outline: none;
+    background-color: lightgoldenrodyellow;
+
+}
+
+.scissors {
+    border-radius: 50%;
+    outline: none;
+    background-color: lightgoldenrodyellow;
+
+}
+
+.rock:hover {
+    transform: scale(1.2);
+    border-color: burlywood;
+}
+
+.paper:hover {
+    transform: scale(1.2);
+    border-color: burlywood;
+}
+
+.scissors:hover {
+    transform: scale(1.2);
+    border-color: burlywood;
+}
+
+.result {
+    font-size: x-large;
+    font-weight: bolder;
+    background-color: rgb(148, 148, 148);
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+}
+
+.restart {
+    border-style: groove;
+    border-color: burlywood;
+    background-color:lemonchiffon;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 12px;
+    outline: none;
+}
+
+.restart:hover {
+    background-color: gold;
+}
