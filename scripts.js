@@ -52,6 +52,21 @@ function playRound(playerSelection) {
     }
 }
 
+function finishGame() {
+    finish.forEach( active => {
+        active.remove();
+      })
+    const restart = document.createElement("button")
+    restart.classList.add("restart")
+    restart.textContent = "Restart"
+    restart.addEventListener("click", () => window.location.reload())
+    const result = document.createElement("div")
+    result.classList.add("result")
+    result.textContent = match
+    body.append(result)
+    body.append(restart)
+}
+
 function game() {
     if (!(pcPoints === 5 || userPoints === 5)) {
         playRound(playerSelection);
